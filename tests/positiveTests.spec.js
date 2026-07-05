@@ -3,13 +3,11 @@ import { LoginPage } from '../pages/LoginPage.js'
 import { InventoryPage } from '../pages/InventoryPage.js'
 import { USERS, URL } from '../data/testData.js'
 
-
 test.describe('Positive Data Driven Tests - Swag Labs', () => {
-  test.setTimeout(70000)
-
   test.beforeEach(async ({ page }) => {
     await page.goto(URL.base)
   })
+
   const validUsers = [
     USERS.standard_user,
     USERS.problem_user,
@@ -41,6 +39,7 @@ test.describe('Positive Data Driven Tests - Swag Labs', () => {
     )
 
     await expect(page).toHaveURL(URL.inventory)
+
     await inventoryPage.addItemByIndex(0)
 
     await expect(inventoryPage.cartBadge).toHaveText('1')

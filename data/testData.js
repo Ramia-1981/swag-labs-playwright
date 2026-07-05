@@ -31,16 +31,16 @@ export const USERS = {
     password: PASSWORD,
   },
 }
+export const BASE_URL = 'https://www.saucedemo.com'
 
 export const URL = {
-  base: 'https://www.saucedemo.com/',
-  inventory: 'https://www.saucedemo.com/inventory.html',
-  cart: 'https://www.saucedemo.com/cart.html',
-  checkoutStepOne: 'https://www.saucedemo.com/checkout-step-one.html',
-  checkoutStepTwo: 'https://www.saucedemo.com/checkout-step-two.html',
-  checkoutComplete: 'https://www.saucedemo.com/checkout-complete.html',
+  base: `${BASE_URL}/`,
+  inventory: `${BASE_URL}/inventory.html`,
+  cart: `${BASE_URL}/cart.html`,
+  checkoutStepOne: `${BASE_URL}/checkout-step-one.html`,
+  checkoutStepTwo: `${BASE_URL}/checkout-step-two.html`,
+  checkoutComplete: `${BASE_URL}/checkout-complete.html`,
 }
-
 export const INVALID_CREDENTIALS = {
   username: 'invalid_user',
   password: 'invalid_password',
@@ -53,6 +53,7 @@ export const CUSTOMER_INFO = {
 }
 
 export const ERROR_MESSAGES = {
+  
   lockedOut: 'Epic sadface: Sorry, this user has been locked out.',
   invalidCredentials: 'Epic sadface: Username and password do not match any user in this service',
   usernameRequired: 'Epic sadface: Username is required',
